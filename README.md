@@ -66,7 +66,8 @@ Also GO- and KEGG-enrichment gave more interesting results: during ageing someho
 WGCN analysis did not show interesting findings yet. Changes in heart and lung tissues are as they expected to be (but with exceptions). To find gene modules which can be interesting in terms of aging we should use smaller step for gene network construction, more homogeneous samples and dive into identified modules more precisely. Also we may check for other modules and for other samples from this database, repeat the same workflow with more homogeneous samples,intersect matrisome genes with categories in GO/KEGG enrichment, use GO/KEGG groups to compare particular gene expression dynamics through different age, construct regulatory networks to restore molecular mechanisms of agents interactions in modules, check for found matrisome gene functions. Additionally, it would be interesting to follow up particular genes expression through age groups to understand their dynamics.
 
 ## Credits
-WGCNA part is prepared by [Shipulina Eva](https://github.com/Vatisinl)
+The part of reproducing the previous analysis was prepared by [Mazalov Aleksei](https://github.com/alex-spalax)
+The WGCNA part was prepared by [Shipulina Eva](https://github.com/Vatisinl)
 
 ## References
 1. Guvatova ZG, Kobelyatskaya AA, Kudasheva ER, Pudova EA, Bulavkina EV, Churov AV, Tkacheva ON, Moskalev AA. Matrisome Transcriptome Dynamics during Tissue Aging. Life (Basel). 2024 May 7;14(5):593. doi: 10.3390/life14050593. PMID: 38792614; PMCID: PMC11121957. 
