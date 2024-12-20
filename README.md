@@ -10,7 +10,8 @@ Additionally, it would be interesting to find not only genes which expression ch
 ## Results
 
 ## Reproducing the previous analysis
-Firstly, we focused on studying the article [1] and reproducing the main results reported by the authors. Human transcriptomic data obtained via bulk RNA-seq sequencing of samples collected from 7 different tissues is the object of the analysis in [1].  
+Firstly, we focused on studying the article [1] and reproducing the main results reported by the authors. Human transcriptomic data obtained via bulk RNA-seq sequencing of samples collected from 7 different tissues is the object of the analysis in [1]. To be able to reproduce the results as precisely as possible, we opted for the same bioinformatic tools as the ones reported to have been used in [1].
+We also intended to apply the same filtering to determine which data will be included in our analysis. The data in analysis was obtained from [2] (the v8 section), and the corresponding metadata was downloaded from [3].    
 
 ## WGCNA
 The next stage of the project was to conduct WGCNA to find gene modules that change during ageing process. Due to technical reasons we used only samples from heart, liver and lung. 
