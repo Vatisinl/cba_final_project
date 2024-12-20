@@ -26,6 +26,10 @@ Gene annotations were obtained from [4], so that genes were classified as either
 
 ![did not find a plot](analysis_reproduced/figures/Gene_categories.png "Gene categories.")
 
+We further followed the standart EdgeR pipeline for RNA-seq analysis aimed mainly at finding the differentially expressed genes. The said analysis can be summarized by the schematic below. 
+
+
+
 
 ## WGCNA
 The next stage of the project was to conduct WGCNA to find gene modules that change during ageing process. Due to technical reasons we used only samples from heart, liver and lung. 
