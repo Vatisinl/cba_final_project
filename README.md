@@ -67,3 +67,6 @@ WGCN analysis did not show interesting findings yet. Changes in heart and lung t
 
 ## Credits
 WGCNA part is prepared by [Shipulina Eva](https://github.com/Vatisinl)
+
+## References
+1. Guvatova ZG, Kobelyatskaya AA, Kudasheva ER, Pudova EA, Bulavkina EV, Churov AV, Tkacheva ON, Moskalev AA. Matrisome Transcriptome Dynamics during Tissue Aging. Life (Basel). 2024 May 7;14(5):593. doi: 10.3390/life14050593. PMID: 38792614; PMCID: PMC11121957. 
