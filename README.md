@@ -121,7 +121,7 @@ Then we checked correlations between genes and revealed that there are around 57
 We used stats.linregress to find regression slope and p-value for it between each gene counts and corresponding age. We tried CPM (A), StandarScaler (B) and MinMax normalisations (C), they gave different results.
 I think CPM looks strange because we have a lot of outliers in data; StandartScaler felt them too, but MinMax scaler just put all values in [0; 1] range, so it looked better.
 
-![did not find a plot](gene_prediction/fig/table_results.png)
+![did not find a plot](gene_prediction/fig/volcanoplots.png)
 
 Top10 significant genes with maximum slope related to various functions:
 
@@ -143,7 +143,7 @@ For gene prediction we tried several models: Linear regression, Ridge, Lasso, El
 I have chosen R2 as metric, because gene counts are very different and MSE (or RMSE) are not indicative.
 For all models we had results with R2 < 0, but еhe best results related to the me
 
-
+![did not find a plot](gene_prediction/fig/table_results.png)
 
 
 
