@@ -22,6 +22,8 @@ The filtering results are summarized below. They are also compared with the filt
 
 ![did not find a plot](analysis_reproduced/figures/Filtering.png "Sample Filtering results.")
 
+The donors were also stratified using the methodology proposed in the reference article, the didtinct age groups (stratas) being 20-39, 40-59 and 60-79 years old.
+
 Gene annotations were obtained from [4], so that genes were classified as either "ECM" (aka "Core matrisome genes"), "Matrisome-associated" or "Other". Genes were subsequently characterized into subcategories as seen below.
 
 ![did not find a plot](analysis_reproduced/figures/Gene_categories.png "Gene categories.")
