@@ -101,7 +101,9 @@ We also determined the ECM genes upregulated or downregulated at least in 3 tiss
 
 ## Discussion
 
-In this part of the assignment we've taken the effort to reproduce the results reported in the paer of reference [1], which highlights the role of ECM and ECM-associated genes in the context of aging. For the blood samples, we have managed to reproduce the results almost precisely, while for other tissues a rougher match between our result and the ones reported was observed. We can speculate that these imperfections are due to the lack of detailed information on the used filtering and/or the possibly changed data annotations.
+In this part of the assignment we've taken the effort to reproduce the results reported in the paer of reference [1], which highlights the role of ECM and ECM-associated genes in the context of aging. Although this report centers on describing our analysis of differentially expressed genes among 3 age stratas, we also performed differential expression analysis for 2 age stratas, which only included young and old age stratas of persons 20-39 and 60-79 years old respectively. Predictably and fully consistent with the results reported in [1], the analysis including only 2 groups yielded more differentially expressed genes as the result. 
+
+For the blood samples, we have managed to reproduce the results almost precisely, while for other tissues a rougher match between our result and the ones reported was observed. We can speculate that these imperfections are due to the lack of detailed information on the used filtering and/or the possibly changed data annotations.
 
 With that said, we still consider the obtained results consistent with the ones reported, which, from our point of view, can be proven by the fact that the pathways resulting from enrichment analysis of the gene lists, obtained in the course of our work, matched the ones reported in the article of reference.  
     
