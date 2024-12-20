@@ -36,6 +36,8 @@ We also performed PCA analysis with the help of the same package, making use of 
 
 ![did not find a plot](analysis_reproduced/figures/PCA_all_2.png "PCA_all_genes_2.")
 
+The results of the performed PCA analysis show that samples can indeed be separated by age strata. Of note, we do not include PCA analysis results for the remaining tissues here due to the low number of samples.  
+
 
 
 ## WGCNA
