@@ -28,7 +28,7 @@ Gene annotations were obtained from [4], so that genes were classified as either
 
 We further followed the standart EdgeR pipeline [5] for RNA-seq analysis, andat that stage we aimed mainly at finding the differentially expressed genes. The said analysis can be summarized by the schematic below. 
 
-
+![did not find a plot](analysis_reproduced/figures/EdgeR_pipeline.png "EdgeR pipeline.")
 
 
 ## WGCNA
