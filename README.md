@@ -156,13 +156,20 @@ S100P  calcium sensor and contribute to cellular calcium signaling
 
 For gene prediction we tried several models: Linear regression, Ridge, Lasso, ElasticNet, KNeighborsRegressor, DecisionTreeRegressor (also RandomForest and XGBoost, but computations took too much time). For scaling I used StandartScaler, hyperarameters were obtain with optuna (3 fold crossvalidation inside)
 
-![did not find a plot](gene_prediction/fig/table_results.png)
+![did not find a plot](gene_prediction/fig/table_results.png "Table with results for predictions")
 
 We have chosen R2 as metric, because gene counts are very different and MSE (or RMSE) are not indicative.
 For all models we had results with R2 < 0, but the best results related to the median R2 was obtained with Ridge(alpha = 100) for all genes. I think that in this case Ridge just ignored genes with low counts (so the predictions are bad for them), but worked well for genes with high values. However, the best mean R2 result was demonstrated by ElasticNet and KNN. ElasticNet is able to zero out unnecessary features, so it was more sensitive to predictions and predicted genes with a large number of counts worse, but genes with a small number better.
 
 All tables with resulted R2 (train and test), RMSE, mean expression, as well as tables with obtained hyperparameters can be found in gene_prediction/result_tables folder 
 
+![did not find a plot](gene_prediction/fig/ridge_no_corr_optuna.png "Ridge")
+![did not find a plot](gene_prediction/fig/lasso_no_corr_optuna.png "Lasso")
+![did not find a plot](gene_prediction/fig/elasticnet_no_corr_optuna.png "ElasticNet")
+![did not find a plot](gene_prediction/fig/knn_no_corr_optuna.png "KNN")
+![did not find a plot](gene_prediction/fig/decision_tree_no_corr_optuna.png "Decision tree")
+
+Also as we may see from plots and suspect from the results, typically, for genes with low expression, the prediction is worse than for genes with high expression. And the spearman correlation coefficient (between gene counts and R2) is around 0.6 for all models
 
 ## Credits
 The part of reproducing the previous analysis was prepared by [Mazalov Aleksei](https://github.com/alex-spalax).
