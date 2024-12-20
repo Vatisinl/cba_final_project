@@ -11,7 +11,7 @@ Additionally, it would be interesting to find not only genes which expression ch
 ## WGCNA
 The next stage of the project was to conduct WGCNA to find gene modules that change during ageing process. Due to technical reasons we used only samples from heart, liver and lung. 
 
-Data were preprocessed: metadata was created based on GTEx Portal files: GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt and GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt; after sample filtration gene filtration was performed: min 70 counts per a sample; DESeq normalization was performed as well as variance stabilizing transformation. Then power of correlation was chosen for every tissue such minimum power that scale free topology model fit showed in R^2 more than 0.8. 
+The data were preprocessed: metadata was created based on GTEx Portal files: GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt and GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt; after sample filtration gene filtration was performed: min 70 counts per a sample; DESeq normalization was performed as well as variance stabilizing transformation. Then power of correlation was chosen for every tissue such minimum power that scale free topology model fit showed in R^2 more than 0.8. 
 
 Then we constructed gene modules using blockwiseModules() with maxBlockSize = 7000 and mergeCutHeight = 0.4. If correlation between at least one pair of modules was higher than 0.7 mergeCutHeight was increased on 0.2 until there was no such modules anymore. As a result the most significant modules contained several thousands of genes. 
 
@@ -33,6 +33,7 @@ We saw that all three age groups significantly differs one from each other. Ther
 Then we constructed a plot for the most significant module which is ME1 and saw that, possibly, samples are not very homogeneous. It can be explained by bulky 
 
 To identify biological meaning of ME1 we performed GO- and KEGG-enrichment. It showed a focus on neurogenesis (which can be expected since heart is innervated) but also on T-helper cells differentiation and Malaria. It maybe related to the fact that we do not know causes of death of tissue donors from GTEx portal due to ethical reasons. So it causes questions about the reliability of the approach based on this database in the context of ageing studies: if the person died being young, maybe there are important system-wide changes that differ this patient from the healthy ageing person. 
+
 ![did not find a plot](WGCNA/figs/enrichGO_plot_Heart.png "GO-enrichment")
 ![did not find a plot](WGCNA/figs/kegg_plot_Heart.png "KEGG-enrichment")
 
@@ -57,7 +58,7 @@ Also GO- and KEGG-enrichment gave more interesting results: during ageing someho
 
 ## Discussion
 
-WGCN analysis did not show interesting findings which is expected. To find gene modules which can be interesting in terms of ageing we should use smaller step for gene network construction, more homogeneous samples and dive into identified modules more precisely. It would be interesting to follow up particular genes expression through age groups to understand their dynamics.
+WGCN analysis did not show interesting findings. Changes in heart and lung tissues are as they expected to be (but with exceptions). To find gene modules which can be interesting in terms of ageing we should use smaller step for gene network construction, more homogeneous samples and dive into identified modules more precisely. Also we may check for other modules and for other samples from this database, repeat the same workflow with more homogeneous samples (filtration by expression patterns?),intersect matrisome genes with categories in GO/KEGG enrichment, use GO/KEGG groups to compare particular gene expression dynamics through different age, construct regulatory networks to restore molecular mechanisms of agents interactions in modules, check for found matrisome gene functions. It would be interesting to follow up particular genes expression through age groups to understand their dynamics.
 
 ## Credits
 WGCNA part is prepared by [Shipulina Eva](https://github.com/Vatisinl)
