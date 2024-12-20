@@ -5,7 +5,6 @@ metadat <- read.delim(file="~/Comp_Biol_of_Aging/Project/GTEx_Analysis_v8_Annota
 unique(metadat$SMTS)           
 subj_metadat <- read.delim(file="~/Comp_Biol_of_Aging/Project/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt")
 
-#dat.gct <- read.delim(file="~/Comp_Biol_of_Aging/Project/GTEx_Analysis_v10_RNASeQCv2.4.2_gene_reads.gct.gz", skip=2)
 dat.gct <- read.delim(file="~/Comp_Biol_of_Aging/Project/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz", skip=2)
 
 #########################################################################
@@ -193,6 +192,7 @@ write.csv(deg_blood_f, "./Results/degs_3grs_blood_fem.csv", row.names = FALSE)
 ########################################################################
 ########################################################################
 metadat_heart <- subsetMetadata('Heart', metadat_article, subj_metadat)
+# Uncomment this to perform analysis just for 2 age groups
 #metadat_heart <- metadat_heart[metadat_heart$age_strata != "40-59",]
 table(metadat_heart$SEX)
 ########################################################################
