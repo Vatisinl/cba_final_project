@@ -2,6 +2,7 @@
 Here we present code for our final project on Computational Biology of Aging course done by Mazalov Aleksei (PhD-1), Malygina Alexandra (MSc-2), Shipulina Eva (MSc-2). 
 # ECM transcriptome dynamics during aging
 ## Introduction
+The project centers on performing bioinformatic analysis of the changes in gene expression, that can be detected in aging humans. Firstly, we explore the common patterns in the gene expression changes observed in various tissues and perform functional enrichment analysis of differentially expressed gene lists. Following the workflow, described in [1], we aim to reproduce the previously reported results. This work is part of the endeavour to better understand the role of the extracellular matrix (ECM) in aging.   
 
 Additionally, it would be interesting to find not only genes which expression change between three chosen age groups but also whole modules of genes which change together. It may help to highlight interesting findings in DE analysis, link them, adjust in silico experiments and come to biologically relevant conclusions being based on two different approaches.
 
