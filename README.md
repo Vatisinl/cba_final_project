@@ -44,6 +44,14 @@ The results of gene expression analysis are summarized in the following tables.
 
 ![did not find a plot](analysis_reproduced/figures/DEG_numbers.png "DEG tables.")
 
+For female blood we obtained the following most important ECM DEGs.
+
+![did not find a plot](analysis_reproduced/figures/ECM_female_blood_ours.png "DEG female blood ours.")
+
+The result was almost identical to the one reported in [1].
+
+![did not find a plot](analysis_reproduced/figures/ECM_female_blood.png "DEG female blood.")
+
 
 
 
