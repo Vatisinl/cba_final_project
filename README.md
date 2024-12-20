@@ -18,15 +18,15 @@ Then we constructed gene modules using blockwiseModules() with maxBlockSize = 70
 Then we took the most significant modules from each tissue and worked with them.
 
 ### Heart
-![did not find a plot](WGCNA/figs/dendro_plot_Heart.png, "Separation of modules for heart samples.")
+![did not find a plot](WGCNA/figs/dendro_plot_Heart.png "Separation of modules for heart samples.")
 
 We see several separated by colours modules. The pattern is good so we proceeded with this. 
 
-![did not find a plot](WGCNA/figs/significance_plot_Heart.png, "Significant difference between age groups.")
+![did not find a plot](WGCNA/figs/significance_plot_Heart.png "Significant difference between age groups.")
 
 We saw that all three age groups significantly differs one from each other. Therefore there will be findings in modules changes.  
 
-![did not find a plot](WGCNA/figs/top_module_heatmap_plot_Heart.png, "Separation of samples for heart tissues.")
+![did not find a plot](WGCNA/figs/top_module_heatmap_plot_Heart.png "Separation of samples for heart tissues.")
 
 Then we constructed a plot for the most significant module which is ME1 and saw that, possibly, samples are not very homogeneous.
 
@@ -39,10 +39,10 @@ The most significant gene module for the Liver samples gave no GO and KEGG biolo
 
 ### Lung
 Here we have the same idea of homogeneity for samples. 
-![did not find a plot](WGCNA/figs/top_module_heatmap_plot_Lung.png, "Separation of samples for lung tissues.")
+![did not find a plot](WGCNA/figs/top_module_heatmap_plot_Lung.png "Separation of samples for lung tissues.")
 
 All age groups significantly differs from each other. 
-![did not find a plot](WGCNA/figs/significance_plot_Lung.png, "Significant changes between groups.")
+![did not find a plot](WGCNA/figs/significance_plot_Lung.png "Significant changes between groups.")
 
 Also GO- and KEGG-enrichment gave more interesting results: during ageing somehow respiration, oxidative phosphorilation and mitochondrial gene expression change. It would be interesting to trace particulas genes of interest associated with such changes and to show their dynamics. Additionally, intersection with matrisome genes list gave 40 genes (IBSP, LAMC3, LAMA3, LAMC2, COL11A1, COL17A1, COL4A4, IGFALS, CHADL, COL20A1, LAMA1, SPOCK2, TECTA, FN1, SPP1, FGL2, LAMA5, MATN3, EMILIN2, KCP, CHAD, MFAP1, FBN3, HAPLN1, VWDE, DMP1, VWA2, COL4A3, RSPO1, LAMB2, NDNF, VWA1, CRELD2, GLDN, DMBT1, EYS, COL4A5, AGRN, NTNG2, LAMB3). It would be also interesting to find out are there protein coding genes related to cell adjusting cell connections in lungs or maintaining structure of alveoli. 
 
