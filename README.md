@@ -9,6 +9,8 @@ Additionally, it would be interesting to find not only genes which expression ch
 
 ## Results
 
+## Reproducing the previous analysis
+
 ## WGCNA
 The next stage of the project was to conduct WGCNA to find gene modules that change during ageing process. Due to technical reasons we used only samples from heart, liver and lung. 
 
