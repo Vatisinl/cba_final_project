@@ -69,6 +69,10 @@ For the matrix associated DEGs in the male blood we obtained the results listed 
 
 ![did not find a plot](analysis_reproduced/figures/Matr_assoc_male_blood_ours.png "DEG Matr Assoc male blood_ours.")
 
+The results reported in [1] for the matrix associated genes are listed below.
+
+![did not find a plot](analysis_reproduced/figures/Matr_assoc_blood_theirs.png "DEG Matr Assoc female blood_theirs.")
+
 
 We also determined the ECM genes upregulated or downregulated at least in 3 tissues.
 
