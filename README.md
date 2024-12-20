@@ -3,11 +3,12 @@ Here we present code for our final project on Computational Biology of Aging cou
 # ECM transcriptome dynamics during aging
 ## Introduction
 
-
+Additionally, it would be interesting to find not only genes which expression changes between three chosen age groups but also whole modules of genes which change together. It may help to highlight interesting findings in DE analysis, link them, adjust in silico experiments and come to biologically relevant conclusions being based on two different approaches.
 
 
 ## Results
 
+## WGCNA
 The next stage of the project was to conduct WGCNA to find gene modules that change during ageing process. Due to technical reasons we used only samples from heart, liver and lung. 
 
 Data were preprocessed: metadata was created based on GTEx Portal files: GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt and GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt; after sample filtration gene filtration was performed: min 70 counts per a sample; DESeq normalization was performed as well as variance stabilizing transformation. Then power of correlation was chosen for every tissue such minimum power that scale free topology model fit showed in R^2 more than 0.8. 
@@ -17,17 +18,17 @@ Then we constructed gene modules using blockwiseModules() with maxBlockSize = 70
 Then we took the most significant modules from each tissue and worked with them.
 
 ### Heart
-```{figure} figs/dendro_plot_Heart.png
+```{figure} WGCNA/figs/dendro_plot_Heart.png
 Separation of modules for heart samples.
 ```
 We see several separated by colours modules. The pattern is good so we proceeded with this. 
 
-```{figure} figs/significance_plot_Heart.png
+```{figure} WGCNA/figs/significance_plot_Heart.png
 Significant difference between age groups.
 ```
 We saw that all three age groups significantly differs one from each other. Therefore there will be findings in modules changes.  
 
-```{figure} figs/top_module_heatmap_plot_Heart.png
+```{figure} WGCNA/figs/top_module_heatmap_plot_Heart.png
 Separation of samples for heart tissues.
 ```
 Then we constructed a plot for the most significant module which is ME1 and saw that, possibly, samples are not very homogeneous.
@@ -41,30 +42,19 @@ The most significant gene module for the Liver samples gave no GO and KEGG biolo
 
 ### Lung
 Here we have the same idea of homogeneity for samples. 
-```{figure} figs/top_module_heatmap_plot_Lung.png
+```{figure} WGCNA/figs/top_module_heatmap_plot_Lung.png
 Separation of samples for heart tissues.
 ```
 All age groups significantly differs from each other. 
-```{figure} figs/significance_plot_Lung.png
+```{figure} WGCNA/figs/significance_plot_Lung.png
 Significant changes between groups.
 ```
 
 Also GO- and KEGG-enrichment gave more interesting results: during ageing somehow respiration, oxidative phosphorilation and mitochondrial gene expression change. It would be interesting to trace particulas genes of interest associated with such changes and to show their dynamics. Additionally, intersection with matrisome genes list gave 40 genes (IBSP, LAMC3, LAMA3, LAMC2, COL11A1, COL17A1, COL4A4, IGFALS, CHADL, COL20A1, LAMA1, SPOCK2, TECTA, FN1, SPP1, FGL2, LAMA5, MATN3, EMILIN2, KCP, CHAD, MFAP1, FBN3, HAPLN1, VWDE, DMP1, VWA2, COL4A3, RSPO1, LAMB2, NDNF, VWA1, CRELD2, GLDN, DMBT1, EYS, COL4A5, AGRN, NTNG2, LAMB3). It would be also interesting to find out are there protein coding genes related to cell adjusting cell connections in lungs or maintaining structure of alveoli. 
 
-```{figure} figs/top_module_heatmap_plot_Lung.png
-Separation of samples for heart tissues.
-```
-
 ## Discussion
 
-WGCN analysis did not show interesting findings which is expected. To find gene modules which can be interesting in terms of ageging we should use smaller step for gene network construction, more homogeneous samples. It would be interesting to follow up particular genes expression through age groups to understand dynamics.
+WGCN analysis did not show interesting findings which is expected. To find gene modules which can be interesting in terms of ageing we should use smaller step for gene network construction, more homogeneous samples. It would be interesting to follow up particular genes expression through age groups to understand dynamics.
 
 ## Credits
-This text prepared by [Team member 1](https://linktoyourprofile/scholar/or/linkedin.com) ...
-
-## References
-
-```{bibliography}
-:style: plain
-:filter: docname in docnames
-```
+WGCNA part is prepared by [Shipulina Eva](https://github.com/Vatisinl)
