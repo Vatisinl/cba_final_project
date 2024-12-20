@@ -32,6 +32,8 @@ We further followed the standart EdgeR pipeline [5] for RNA-seq analysis, andat 
 
 ![did not find a plot](analysis_reproduced/figures/EdgeR_pipeline.png "EdgeR pipeline.")
 
+Please refer to the diff_expr.R script for implementation details.
+
 We also performed PCA analysis with the help of the same package, making use of CPM normalization.
 
 ![did not find a plot](analysis_reproduced/figures/PCA_all_1.png "PCA_all_genes_1.")
@@ -77,7 +79,7 @@ As we can see, the results for the blood samples are quite simlar to the ones re
 
 It is worth noting that for other tissues we did not get results that were consistent to a similar degree with the ones reported in the article of reference, which might be due to the differences in filtration, the changes in gene and sample annotation and the possible analysis parameters that were not mentioned in [1].
 
-Still, we managed to partially reproduce the results of functional enrichment analysis, for which the union of all the ECM and matrisome associated DEGs served as input. We used StringDB for the purpose of performing this part of our analysis.
+Still, we managed to partially reproduce the results of functional enrichment analysis, for which the union of all the ECM and matrisome associated DEGs served as input (please refer to the deg_analyzer.R script for implementation details on how DEGs detected for different tissues were combined). We used StringDB for the purpose of performing this part of our analysis. 
 
 The pathways enriched with upregulated genes in female tissues are listed below.
 
@@ -90,7 +92,7 @@ The pathways enriched with upregulated genes in female tissues are listed below.
 In concordance with the results, reported in the article of reference, the enriched pathways include the "TGF-beta signaling pathway", the "PI3K-Akt
 signaling pathway" and "Focal adhesion".
 
-We also determined the ECM genes upregulated or downregulated at least in 3 tissues.
+We also determined the ECM genes upregulated or downregulated at least in 3 tissues (please refer to the deg_analyzer.R script for implementation details on how DEGs detected for at least 3 tissues were determined).
 
 ![did not find a plot](analysis_reproduced/figures/ECM_genes_3_tissues_female.png "ECM 3 tissues female.")
 
