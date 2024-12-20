@@ -19,7 +19,7 @@ To follow the workflow, reported in [1], we included only samples from the heart
 skeleton muscles (the SMTS field in the GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt file). For consistency with the paper of reference, we also performed additional filtering on the SMTSD field in the same file, keeping only samples with one of the following values for the mentioned attribute: 'Brain - Hippocampus', 'Brain - Cerebellum', 'Brain - Caudate (basal ganglia)', 'Brain - Putamen (basal ganglia)', 'Brain - Cortex'. We also included only 'Whole Blood' data to match the number of analyzed samples with the number of blood samples in the reference paper. We also limited our research to the RNASEQ samples (the SMAFRZE field) and filtered out the 'RNA isolation_PAXgene Tissue miRNA' samples (the SMNABTCHT field). We were left with 3214 samples, which is different from the 2717 samples reported in the article of reference.
 
 The filtering results are summarized below. They are also compared with the filtering results reported in [1].
-![did not find a plot](analysis_reproduced/figures/Figures "Sample Filtering results.")
+![did not find a plot](analysis_reproduced/figures/Filtering.png "Sample Filtering results.")
 
 ## WGCNA
 The next stage of the project was to conduct WGCNA to find gene modules that change during ageing process. Due to technical reasons we used only samples from heart, liver and lung. 
