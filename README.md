@@ -30,6 +30,8 @@ We further followed the standart EdgeR pipeline [5] for RNA-seq analysis, andat 
 
 ![did not find a plot](analysis_reproduced/figures/EdgeR_pipeline.png "EdgeR pipeline.")
 
+We also performed PCA analysis with the help of the same package, making use of CPM normalization.
+
 
 ## WGCNA
 The next stage of the project was to conduct WGCNA to find gene modules that change during ageing process. Due to technical reasons we used only samples from heart, liver and lung. 
