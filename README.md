@@ -1,4 +1,4 @@
-# cba_final_project
+![image](https://github.com/user-attachments/assets/dc5bf374-c700-466a-91fd-dcdcd661e4da)# cba_final_project
 Here we present code for our final project on Computational Biology of Aging course done by Mazalov Aleksei (PhD-1), Malygina Alexandra (MSc-2), Shipulina Eva (MSc-2). 
 # ECM transcriptome dynamics during aging
 ## Introduction
@@ -62,7 +62,12 @@ The result was almost identical to the one reported in [1].
 
 For the matrix associated DEGs in the female blood we obtained the results listed below.
 
+![did not find a plot](analysis_reproduced/figures/Matr_assoc_female_blood_ours.png "DEG Matr Assoc female blood_ours.")
 
+
+For the matrix associated DEGs in the male blood we obtained the results listed below.
+
+![did not find a plot](analysis_reproduced/figures/Matr_assoc_male_blood_ours.png "DEG Matr Assoc male blood_ours.")
 
 
 We also determined the ECM genes upregulated or downregulated at least in 3 tissues.
