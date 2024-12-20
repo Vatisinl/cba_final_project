@@ -103,6 +103,46 @@ Also GO- and KEGG-enrichment gave more interesting results: during ageing someho
 
 WGCN analysis did not show interesting findings yet. Changes in heart and lung tissues are as they expected to be (but with exceptions). To find gene modules which can be interesting in terms of aging we should use smaller step for gene network construction, more homogeneous samples and dive into identified modules more precisely. Also we may check for other modules and for other samples from this database, repeat the same workflow with more homogeneous samples,intersect matrisome genes with categories in GO/KEGG enrichment, use GO/KEGG groups to compare particular gene expression dynamics through different age, construct regulatory networks to restore molecular mechanisms of agents interactions in modules, check for found matrisome gene functions. Additionally, it would be interesting to follow up particular genes expression through age groups to understand their dynamics.
 
+
+## Gene expression prediction
+
+### Data analysis
+
+After cleaning the data from unnecessary samples we checked the distribution of gene counts for each gene. The genes were very difference, for some of them median expression was 0.5 counts, for others several thousands.
+
+Then we checked correlations between genes and revealed that there are around 5732 correlated pairs (correlation > 0.7)
+
+### Regression between gene expression and age
+
+We used stats.linregress to find regression slope and p-value for it between each gene counts and corresponding age. We tried CPM (A), StandarScaler (B) and MinMax normalisations (C), they gave different results.
+I think CPM looks strange because we have a lot of outliers in data; StandartScaler felt them too, but MinMax scaler just put all values in [0; 1] range, so it looked better.
+
+
+
+Top10 significant genes with maximum slope related to various functions:
+
+LGI4 Involved in regulation of myelination.
+SERPINB8 epithelial desmosome-mediated cell-cell adhesion
+SEMA4C cell-cell signaling
+CTSS removal of the invariant chain from MHC class II molecules
+ADAM8  calcium ion binding and metallopeptidase activity
+IL16  pleiotropic cytokine that functions as a chemoattractant, a modulator of T cell activation
+S100Z  calcium ion binding
+CSTA desmosome-mediated cell-cell adhesion
+PTN significant roles in cell growth and survival, cell migration, angiogenesis and tumorigenesis
+S100P  calcium sensor and contribute to cellular calcium signaling
+
+### Gene expression prediction
+
+For gene prediction we tried several models: Linear regression, Ridge, Lasso, ElasticNet, KNeighborsRegressor, DecisionTreeRegressor (also RandomForest and XGBoost, but computations took too much time). Parameters were obtain with optuna (3 fold crossvalidation inside)
+
+I have chosen R2 as metric, because gene counts are very different and MSE (or RMSE) are not indicative.
+For all models we had results with R2 < 0, but еhe best results related to the me
+
+
+
+
+
 ## Credits
 The part of reproducing the previous analysis was prepared by [Mazalov Aleksei](https://github.com/alex-spalax).
 
