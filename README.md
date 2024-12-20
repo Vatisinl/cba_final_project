@@ -50,7 +50,7 @@ For female blood we obtained the following most important ECM DEGs.
 
 The result was almost identical to the one reported in [1].
 
-![did not find a plot](analysis_reproduced/figures/ECM_female_blood.png "DEG female blood.")
+![did not find a plot](analysis_reproduced/figures/ECM_female_blood_theirs.png "DEG female blood.")
 
 
 
