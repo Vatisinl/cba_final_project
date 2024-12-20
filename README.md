@@ -60,12 +60,18 @@ The result was almost identical to the one reported in [1].
 
 ![did not find a plot](analysis_reproduced/figures/ECM_male_blood_theirs.png "DEG male blood.")
 
+For the matrix associated DEGs in the female blood we obtained the results listed below.
 
-We also determined the genes upregulated or downregulated at least in 3 tissues.
+
+
+
+We also determined the ECM genes upregulated or downregulated at least in 3 tissues.
 
 ![did not find a plot](analysis_reproduced/figures/ECM_genes_3_tissues_female.png "ECM 3 tissues female.")
 
 ![did not find a plot](analysis_reproduced/figures/ECM_genes_3_tissues_male.png "ECM 3 tissues male.")
+
+
 
 
 
