@@ -73,6 +73,11 @@ The results reported in [1] for the matrix associated genes are listed below.
 
 ![did not find a plot](analysis_reproduced/figures/Matr_assoc_blood_theirs.png "DEG Matr Assoc female blood_theirs.")
 
+As we can see, the results for the blood samples are quite simlar to the ones reported in the article of reference.
+
+It is worth noting that for other tissues we did not get results that were consistent to a similar degree with the ones reported in the article of reference, which might be due to the differences in filtration, the changes in gene and sample annotation and the possible analysis parameters that were not mentioned in [1].
+
+Still, we managed to partially reproduce the results of functional enrichment analysis, for which the union of all the ECM and matrisome associated DEGs served as input. 
 
 We also determined the ECM genes upregulated or downregulated at least in 3 tissues.
 
