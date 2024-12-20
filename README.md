@@ -154,19 +154,22 @@ S100P  calcium sensor and contribute to cellular calcium signaling
 
 ### Gene expression prediction
 
-For gene prediction we tried several models: Linear regression, Ridge, Lasso, ElasticNet, KNeighborsRegressor, DecisionTreeRegressor (also RandomForest and XGBoost, but computations took too much time). Parameters were obtain with optuna (3 fold crossvalidation inside)
-
-I have chosen R2 as metric, because gene counts are very different and MSE (or RMSE) are not indicative.
-For all models we had results with R2 < 0, but еhe best results related to the me
+For gene prediction we tried several models: Linear regression, Ridge, Lasso, ElasticNet, KNeighborsRegressor, DecisionTreeRegressor (also RandomForest and XGBoost, but computations took too much time). For scaling I used StandartScaler, hyperarameters were obtain with optuna (3 fold crossvalidation inside)
 
 ![did not find a plot](gene_prediction/fig/table_results.png)
 
+We have chosen R2 as metric, because gene counts are very different and MSE (or RMSE) are not indicative.
+For all models we had results with R2 < 0, but the best results related to the median R2 was obtained with Ridge(alpha = 100) for all genes. I think that in this case Ridge just ignored genes with low counts (so the predictions are bad for them), but worked well for genes with high values. However, the best mean R2 result was demonstrated by ElasticNet and KNN. ElasticNet is able to zero out unnecessary features, so it was more sensitive to predictions and predicted genes with a large number of counts worse, but genes with a small number better.
+
+All tables with resulted R2 (train and test), RMSE, mean expression, as well as tables with obtained hyperparameters can be found in gene_prediction/result_tables folder 
 
 
 ## Credits
 The part of reproducing the previous analysis was prepared by [Mazalov Aleksei](https://github.com/alex-spalax).
 
 The WGCNA part was prepared by [Shipulina Eva](https://github.com/Vatisinl)
+
+The Gene expression predioction part was prepared by [Malygina Alexandra](https://github.com/Alexandra2022kzn)
 
 ## References
 1. Guvatova ZG, Kobelyatskaya AA, Kudasheva ER, Pudova EA, Bulavkina EV, Churov AV, Tkacheva ON, Moskalev AA. Matrisome Transcriptome Dynamics during Tissue Aging. Life (Basel). 2024 May 7;14(5):593. doi: 10.3390/life14050593. PMID: 38792614; PMCID: PMC11121957.
