@@ -52,6 +52,14 @@ The result was almost identical to the one reported in [1].
 
 ![did not find a plot](analysis_reproduced/figures/ECM_female_blood_theirs.png "DEG female blood.")
 
+For male blood we obtained the following most important ECM DEGs.
+
+![did not find a plot](analysis_reproduced/figures/ECM_male_blood_ours.png "DEG male blood ours.")
+
+The result was almost identical to the one reported in [1].
+
+![did not find a plot](analysis_reproduced/figures/ECM_male_blood_theirs.png "DEG male blood.")
+
 
 
 
