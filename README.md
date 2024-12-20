@@ -110,14 +110,18 @@ WGCN analysis did not show interesting findings yet. Changes in heart and lung t
 
 After cleaning the data from unnecessary samples we checked the distribution of gene counts for each gene. The genes were very difference, for some of them median expression was 0.5 counts, for others several thousands.
 
+![did not find a plot](gene_prediction/fig/gene_expression.png)
+
 Then we checked correlations between genes and revealed that there are around 5732 correlated pairs (correlation > 0.7)
+
+![did not find a plot](gene_prediction/fig/corr_all_genes.png)
 
 ### Regression between gene expression and age
 
 We used stats.linregress to find regression slope and p-value for it between each gene counts and corresponding age. We tried CPM (A), StandarScaler (B) and MinMax normalisations (C), they gave different results.
 I think CPM looks strange because we have a lot of outliers in data; StandartScaler felt them too, but MinMax scaler just put all values in [0; 1] range, so it looked better.
 
-
+![did not find a plot](gene_prediction/fig/table_results.png)
 
 Top10 significant genes with maximum slope related to various functions:
 
