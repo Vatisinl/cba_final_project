@@ -26,7 +26,7 @@ Gene annotations were obtained from [4], so that genes were classified as either
 
 ![did not find a plot](analysis_reproduced/figures/Gene_categories.png "Gene categories.")
 
-We further followed the standart EdgeR pipeline for RNA-seq analysis aimed mainly at finding the differentially expressed genes. The said analysis can be summarized by the schematic below. 
+We further followed the standart EdgeR pipeline [5] for RNA-seq analysis, andat that stage we aimed mainly at finding the differentially expressed genes. The said analysis can be summarized by the schematic below. 
 
 
 
@@ -96,4 +96,5 @@ The WGCNA part was prepared by [Shipulina Eva](https://github.com/Vatisinl)
 1. Guvatova ZG, Kobelyatskaya AA, Kudasheva ER, Pudova EA, Bulavkina EV, Churov AV, Tkacheva ON, Moskalev AA. Matrisome Transcriptome Dynamics during Tissue Aging. Life (Basel). 2024 May 7;14(5):593. doi: 10.3390/life14050593. PMID: 38792614; PMCID: PMC11121957.
 2. https://www.gtexportal.org/home/downloads/adult-gtex/bulk_tissue_expression
 3. https://storage.googleapis.com/adult-gtex/annotations/v8/metadata-files
-4. MatrisomeDB: 2023 updates of the ECM protein knowledge database. Shao X, Gomez CD, Kapoor N, Considine JM, Gao Y, Naba A. Nucleic Acids Research, 2022, gkac1009. doi.org/10.1093/nar/gkac1009 
+4. MatrisomeDB: 2023 updates of the ECM protein knowledge database. Shao X, Gomez CD, Kapoor N, Considine JM, Gao Y, Naba A. Nucleic Acids Research, 2022, gkac1009. doi.org/10.1093/nar/gkac1009
+5. Robinson MD, McCarthy DJ, Smyth GK. edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics. 2010 Jan 1;26(1):139-40. doi: 10.1093/bioinformatics/btp616. Epub 2009 Nov 11. PMID: 19910308; PMCID: PMC2796818.
