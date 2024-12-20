@@ -142,14 +142,23 @@ I think CPM looks strange because we have a lot of outliers in data; StandartSca
 Top10 significant genes with maximum slope related to various functions:
 
 LGI4 Involved in regulation of myelination.
+
 SERPINB8 epithelial desmosome-mediated cell-cell adhesion
+
 SEMA4C cell-cell signaling
+
 CTSS removal of the invariant chain from MHC class II molecules
+
 ADAM8  calcium ion binding and metallopeptidase activity
+
 IL16  pleiotropic cytokine that functions as a chemoattractant, a modulator of T cell activation
+
 S100Z  calcium ion binding
+
 CSTA desmosome-mediated cell-cell adhesion
+
 PTN significant roles in cell growth and survival, cell migration, angiogenesis and tumorigenesis
+
 S100P  calcium sensor and contribute to cellular calcium signaling
 
 ### Gene expression prediction
@@ -163,10 +172,15 @@ For all models we had results with R2 < 0, but the best results related to the m
 
 All tables with resulted R2 (train and test), RMSE, mean expression, as well as tables with obtained hyperparameters can be found in gene_prediction/result_tables folder 
 
+Ridge
 ![did not find a plot](gene_prediction/fig/ridge_no_corr_optuna.png "Ridge")
+Lasso
 ![did not find a plot](gene_prediction/fig/lasso_no_corr_optuna.png "Lasso")
+ElasticNet
 ![did not find a plot](gene_prediction/fig/elasticnet_no_corr_optuna.png "ElasticNet")
+KNN
 ![did not find a plot](gene_prediction/fig/knn_no_corr_optuna.png "KNN")
+Decision tree
 ![did not find a plot](gene_prediction/fig/decision_tree_no_corr_optuna.png "Decision tree")
 
 Also as we may see from plots and suspect from the results, typically, for genes with low expression, the prediction is worse than for genes with high expression. And the spearman correlation coefficient (between gene counts and R2) is around 0.6 for all models
@@ -184,3 +198,4 @@ The Gene expression predioction part was prepared by [Malygina Alexandra](https:
 3. https://storage.googleapis.com/adult-gtex/annotations/v8/metadata-files
 4. MatrisomeDB: 2023 updates of the ECM protein knowledge database. Shao X, Gomez CD, Kapoor N, Considine JM, Gao Y, Naba A. Nucleic Acids Research, 2022, gkac1009. doi.org/10.1093/nar/gkac1009
 5. Robinson MD, McCarthy DJ, Smyth GK. edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics. 2010 Jan 1;26(1):139-40. doi: 10.1093/bioinformatics/btp616. Epub 2009 Nov 11. PMID: 19910308; PMCID: PMC2796818.
+6. https://www.genecards.org/ (for information about genes)
