@@ -11,7 +11,12 @@ Additionally, it would be interesting to find not only genes which expression ch
 
 ## Reproducing the previous analysis
 Firstly, we focused on studying the article [1] and reproducing the main results reported by the authors. Human transcriptomic data obtained via bulk RNA-seq sequencing of samples collected from 7 different tissues is the object of the analysis in [1]. To be able to reproduce the results as precisely as possible, we opted for the same bioinformatic tools as the ones reported to have been used in [1].
-We also intended to apply the same filtering to determine which data will be included in our analysis. The data in analysis was obtained from [2] (the v8 section), and the corresponding metadata was downloaded from [3].    
+We also intended to apply the same filtering to determine which data will be included in our analysis. 
+
+The data in analysis was obtained from [2] (the v8 section), and the corresponding metadata was downloaded from [3]. The metadata included the GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt file (containing mainly sample related data, with the tissue provenance and the experiment type being the most important for our filtering) and the GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt (containing donor related metadata, such as age and sex).
+
+To follow the workflow, reported in [1], we included only samples from the heart, blood, brain, liver, kidneys, lungs, and
+skeleton muscles (the SMTS field in the GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt file). For consistency with the paper of reference, we also performed additional filtering on the SMTSD field in the same file, keeping only samples with one of the following values for the mentioned attribute: 'Brain - Hippocampus', 'Brain - Cerebellum', 'Brain - Caudate (basal ganglia)', 'Brain - Putamen (basal ganglia)', 'Brain - Cortex'. We also included only 'Whole Blood' data to match the number of analyzed samples with the number of blood samples in the reference paper. We also limited our research to the RNASEQ samples (the SMAFRZE field) and filtered out the 'RNA isolation_PAXgene Tissue miRNA' samples (the SMNABTCHT field). We were left with 3214 samples, which is different from the 2717 samples reported in the article of reference.
 
 ## WGCNA
 The next stage of the project was to conduct WGCNA to find gene modules that change during ageing process. Due to technical reasons we used only samples from heart, liver and lung. 
