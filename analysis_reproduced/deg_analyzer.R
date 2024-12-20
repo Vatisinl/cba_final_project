@@ -7,7 +7,7 @@ library(stringr)
 
 gene_metadata_cols = c('Description', 'Source')
 
-for (num_grs in c("3grs")) {
+for (num_grs in c("3grs", "2grs")) {
   for (sex in c('male', 'fem')) {
     deg_upreg_names_all <- data.frame(matrix(nrow=0, ncol=length(gene_metadata_cols)))
     colnames(deg_upreg_names_all) <- gene_metadata_cols
@@ -38,10 +38,10 @@ for (num_grs in c("3grs")) {
       save_filename_upreg <- paste("upreg", test_filename, sep = "_")
       save_filename_downreg <- paste("downreg", test_filename, sep = "_")
       
-      print(paste("./StringDB/", num_grs, "/", save_filename_upreg, sep = ""))
-      print(paste("./StringDB/", num_grs, "/", save_filename_downreg, sep = ""))
-     # write.csv(degs_test_upreg, paste("./StringDB/", num_grs, "/", save_filename_upreg, sep = ""), row.names = FALSE)
-    #  write.csv(degs_test_downreg, paste("./StringDB/", num_grs, "/", save_filename_downreg, sep = ""), row.names = FALSE)
+      print(paste("./", num_grs, "/", save_filename_upreg, sep = ""))
+      print(paste("./", num_grs, "/", save_filename_downreg, sep = ""))
+      write.csv(degs_test_upreg, paste("./", num_grs, "/", save_filename_upreg, sep = ""), row.names = FALSE)
+      write.csv(degs_test_downreg, paste("./", num_grs, "/", save_filename_downreg, sep = ""), row.names = FALSE)
    }
     
     agg_tbl_upreg <- as.data.frame(deg_upreg_names_all %>% group_by(Description) %>% 
@@ -50,27 +50,28 @@ for (num_grs in c("3grs")) {
     agg_tbl_downreg <- as.data.frame(deg_downreg_names_all %>% group_by(Description) %>% 
                                      summarise(num_tissues = n()))
     agg_tbl_downreg <- agg_tbl_downreg[agg_tbl_downreg$num_tissues >= 3, ]
-    
+
+    #Uncomment this for analyzing the union of all the DEGs
     #deg_upreg_names_all <- deg_upreg_names_all[!duplicated(deg_upreg_names_all), ]
     #deg_downreg_names_all <- deg_downreg_names_all[!duplicated(deg_downreg_names_all), ]
-    print(paste("./StringDB/", num_grs, "/upreg_degs_", num_grs, "_", sex, ".csv", sep = ""))
-    print(paste("./StringDB/", num_grs, "/downreg_degs_", num_grs, "_", sex, ".csv", sep = ""))
-    #write.csv(deg_upreg_names_all, paste("./StringDB/", num_grs, "/upreg_degs_", num_grs, "_", sex, ".csv", sep = ""), row.names = FALSE)
-    #write.csv(deg_downreg_names_all, paste("./StringDB/", num_grs, "/downreg_degs_", num_grs, "_", sex, ".csv", sep = ""), row.names = FALSE)
-    write.csv(agg_tbl_upreg, paste("./StringDB/", num_grs, "/common_upreg_degs_", num_grs, "_", sex, ".csv", sep = ""), row.names = FALSE)
-    write.csv(agg_tbl_downreg, paste("./StringDB/", num_grs, "/common_downreg_degs_", num_grs, "_", sex, ".csv", sep = ""), row.names = FALSE)
+    print(paste("./", num_grs, "/upreg_degs_", num_grs, "_", sex, ".csv", sep = ""))
+    print(paste("./", num_grs, "/downreg_degs_", num_grs, "_", sex, ".csv", sep = ""))
+    write.csv(deg_upreg_names_all, paste("./", num_grs, "/upreg_degs_", num_grs, "_", sex, ".csv", sep = ""), row.names = FALSE)
+    write.csv(deg_downreg_names_all, paste("./", num_grs, "/downreg_degs_", num_grs, "_", sex, ".csv", sep = ""), row.names = FALSE)
+    write.csv(agg_tbl_upreg, paste("./", num_grs, "/common_upreg_degs_", num_grs, "_", sex, ".csv", sep = ""), row.names = FALSE)
+    write.csv(agg_tbl_downreg, paste("./", num_grs, "/common_downreg_degs_", num_grs, "_", sex, ".csv", sep = ""), row.names = FALSE)
   }
 }
 
-common_upreg_male <- read.delim(file="./StringDB/3grs/common_upreg_degs_3grs_male.csv", sep = ',')
-common_downreg_male <- read.delim(file="./StringDB/3grs/common_downreg_degs_3grs_male.csv", sep = ',')
+common_upreg_male <- read.delim(file="./3grs/common_upreg_degs_3grs_male.csv", sep = ',')
+common_downreg_male <- read.delim(file="./3grs/common_downreg_degs_3grs_male.csv", sep = ',')
 common_degs_male <- rbind(common_upreg_male, common_downreg_male)
 
 heatmap_data <- c()
 
 for (sex in c('male', 'fem')) {
-  common_upreg_sex <- read.delim(file=paste("./StringDB/", num_grs, "/common_upreg_degs_", num_grs, "_", sex, ".csv", sep = ""), sep = ',')
-  common_downreg_sex <- read.delim(file=paste("./StringDB/", num_grs, "/common_downreg_degs_", num_grs, "_", sex, ".csv", sep = ""), sep = ',')
+  common_upreg_sex <- read.delim(file=paste("./", num_grs, "/common_upreg_degs_", num_grs, "_", sex, ".csv", sep = ""), sep = ',')
+  common_downreg_sex <- read.delim(file=paste("./", num_grs, "/common_downreg_degs_", num_grs, "_", sex, ".csv", sep = ""), sep = ',')
   common_degs_sex <- rbind(common_upreg_sex, common_downreg_sex)
   
   search_pattern <- paste("degs_", num_grs, "_(blood|heart|kidney|brain|muscle|liver|lung)_", sex, ".csv", sep="")
@@ -89,8 +90,6 @@ for (sex in c('male', 'fem')) {
       combined_df_sex <- test_df[, c('Description', 'logFC')]
     } else {
       combined_df_sex <- combined_df_sex %>%
-        # select(Description, logFC) %>%
-        #  rename(C1 = logFC) %>%
         full_join(test_df %>% select(Description, logFC), by = "Description")
     }
   }
