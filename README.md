@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dc5bf374-c700-466a-91fd-dcdcd661e4da)# cba_final_project
+# cba_final_project
 Here we present code for our final project on Computational Biology of Aging course done by Mazalov Aleksei (PhD-1), Malygina Alexandra (MSc-2), Shipulina Eva (MSc-2). 
 # ECM transcriptome dynamics during aging
 ## Introduction
