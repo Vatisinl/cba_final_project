@@ -40,6 +40,11 @@ We also performed PCA analysis with the help of the same package, making use of 
 
 The results of the performed PCA analysis show that samples can indeed be separated by age strata. Of note, we do not include PCA analysis results for the remaining tissues here due to the low number of samples.  
 
+The results of gene expression analysis are summarized in the following tables.
+
+![did not find a plot](analysis_reproduced/figures/DEG_numbers.png "DEG tables.")
+
+
 
 
 ## WGCNA
