@@ -45,15 +45,19 @@ The most significant gene module for the Liver samples gave no GO and KEGG biolo
 
 ### Lung
 ![did not find a plot](WGCNA/figs/dendro_plot_Lung.png "Separation of modules for heart samples.")
+
 Modules are separated well. 
 
 ![did not find a plot](WGCNA/figs/top_module_heatmap_plot_Lung.png "Separation of samples for lung tissues.")
+
 Here we have the same idea of homogeneity for samples. 
 
 ![did not find a plot](WGCNA/figs/significance_plot_Lung.png "Significant changes between groups.")
+
 All age groups significantly differs from each other. 
 
 Also GO- and KEGG-enrichment gave more interesting results: during ageing somehow respiration, oxidative phosphorilation and mitochondrial gene expression change. It would be interesting to trace particulas genes of interest associated with such changes and to show their dynamics. Additionally, intersection with matrisome genes list gave 40 genes (IBSP, LAMC3, LAMA3, LAMC2, COL11A1, COL17A1, COL4A4, IGFALS, CHADL, COL20A1, LAMA1, SPOCK2, TECTA, FN1, SPP1, FGL2, LAMA5, MATN3, EMILIN2, KCP, CHAD, MFAP1, FBN3, HAPLN1, VWDE, DMP1, VWA2, COL4A3, RSPO1, LAMB2, NDNF, VWA1, CRELD2, GLDN, DMBT1, EYS, COL4A5, AGRN, NTNG2, LAMB3). This intersection also is not at random according to Chi-square test (p < 0.05). It would be also interesting to find out are there protein coding genes related to cell adjusting cell connections in lungs or maintaining structure of alveoli. 
+
 ![did not find a plot](WGCNA/figs/enrichGO_plot_Lung.png "GO-enrichment")
 ![did not find a plot](WGCNA/figs/kegg_plot_Lung.png "KEGG-enrichment")
 
