@@ -24,8 +24,7 @@ The filtering results are summarized below. They are also compared with the filt
 
 Gene annotations were obtained from [4], so that genes were classified as either "ECM" (aka "Core matrisome genes"), "Matrisome-associated" or "Other". Genes were subsequently characterized into subcategories as seen below.
 
-
-
+![did not find a plot](analysis_reproduced/figures/Gene_categories.png "Gene categories.")
 
 
 ## WGCNA
